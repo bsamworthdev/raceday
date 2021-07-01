@@ -19,6 +19,9 @@ module.exports = {
                 blue: {
                     amstrad: '#08128A',
                 },
+                lightblue: {
+                    amstrad: '#6CEAEB',
+                },
                 yellow: {
                     amstrad: '#FCF552'
                 }

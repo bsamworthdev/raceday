@@ -1,36 +1,23 @@
 <template>
-    <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
-        <div v-if="canLogin" class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-            <inertia-link v-if="$page.props.user" href="/dashboard" class="text-sm text-gray-700 underline">
-                Dashboard
-            </inertia-link>
+    <div class="relative flex items-end justify-center min-h-screen bg-blue-amstrad  sm:items-end sm:pt-0">
+        <div class="max-w-6xl mx-auto sm:px-6 lg:px-8 mb-8">
 
-            <template v-else>
-                <inertia-link :href="route('login')" class="text-sm text-gray-700 underline">
-                    Log in
-                </inertia-link>
-
-                <inertia-link v-if="canRegister" :href="route('register')" class="ml-4 text-sm text-gray-700 underline">
-                    Register
-                </inertia-link>
-            </template>
-        </div>
-
-        <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-           
-
-            <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                <p class="text-6xl text-white">Raceday</p>
+            <div class="mt-8 text-m text-center p-2 pr-6 pl-6 border-8 border-red-600 text-blue-amstrad bg-lightblue-amstrad overflow-hidden shadow">
+                <p class="text-xl tracking-widest">CASCADE 1985</p>
+                <p class="text-xl tracking-widest">DAY AT THE RACES</p>
+                <p class="mt-3">Can you pick the right horses and place the right bets</p>
+                <SecondaryButton @click="start" class="mt-6 text-2xl">
+                    Press Any Key
+                </SecondaryButton>
             </div>
-
-            <SecondaryButton @click="start" class="mt-6 text-2xl">
-                Get started
-            </SecondaryButton>
         </div>
     </div>
 </template>
 
 <style scoped>
+    div {
+        font-family: 'Amstrad CPC464', Arial, Helvetica, sans-serif; 
+    }
     .bg-gray-100 {
         background-color: #f7fafc;
         background-color: rgba(247, 250, 252, var(--tw-bg-opacity));

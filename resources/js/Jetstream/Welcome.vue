@@ -26,7 +26,7 @@
                     <div v-if="selectedHorseId > 0">
                         <Label class="block p-1">How much shall I put on the horse?</Label>
                         <Label class="block p-1">£   
-                            <Input id="betAmount" class="p-0" @keydown="amountKeyDown" v-model="enteredAmount" type="number" min="1" :max="cash"/>
+                            <Input id="betAmount" class="p-0" @keydown="amountKeyDown" v-model="enteredAmount" type="number" min="1" :max="cash" width="250px"/>
                         </Label>
                     </div>
                 </div>
@@ -272,15 +272,18 @@
                                 this.commentaryText += ' -- YOU WIN!!';
                             } else {
                                 //lose
-                                if (this.cash == 0) {
-                                    this.commentaryText += ' -- GAME OVER!!';
-                                    this.cash = 100;
-                                }
                             }
+
                             _this = this;
                             setTimeout(function() {
-                                _this.loadBettingScreen();
+                                if (_this.cash == 0) {
+                                    window.location.href='/';
+                                }
+                                else {
+                                    _this.loadBettingScreen();
+                                }
                             },3000);
+
                         } else {
                             this.commentaryText=leadingHorse.name + ' in the lead';
                         }
@@ -395,7 +398,7 @@
                     if (!this.bettingMode){
                         this.secondElapsed();
                     }
-                }, 1000);
+                }, 700);
             });
             this.loadBettingScreen();
             if (document.getElementById('betHorse')){

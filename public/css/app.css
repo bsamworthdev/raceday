@@ -1174,8 +1174,11 @@ select {
 .-mt-px {
 	margin-top: -1px;
 }
-.mr-1 {
-	margin-right: 0.25rem;
+.mb-3 {
+	margin-bottom: 0.75rem;
+}
+.mb-8 {
+	margin-bottom: 2rem;
 }
 .block {
 	display: block;
@@ -1348,6 +1351,9 @@ select {
 .flex-wrap {
 	flex-wrap: wrap;
 }
+.items-end {
+	align-items: flex-end;
+}
 .items-center {
 	align-items: center;
 }
@@ -1432,6 +1438,9 @@ select {
 .border-2 {
 	border-width: 2px;
 }
+.border-8 {
+	border-width: 8px;
+}
 .border-b-2 {
 	border-bottom-width: 2px;
 }
@@ -1469,6 +1478,10 @@ select {
 .border-gray-400 {
 	--tw-border-opacity: 1;
 	border-color: rgba(156, 163, 175, var(--tw-border-opacity));
+}
+.border-red-600 {
+	--tw-border-opacity: 1;
+	border-color: rgba(220, 38, 38, var(--tw-border-opacity));
 }
 .bg-white {
 	--tw-bg-opacity: 1;
@@ -1522,6 +1535,10 @@ select {
 	--tw-bg-opacity: 1;
 	background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
 }
+.bg-lightblue-amstrad {
+	--tw-bg-opacity: 1;
+	background-color: rgba(108, 234, 235, var(--tw-bg-opacity));
+}
 .object-cover {
 	-o-object-fit: cover;
 	   object-fit: cover;
@@ -1535,11 +1552,11 @@ select {
 .p-3 {
 	padding: 0.75rem;
 }
-.p-0 {
-	padding: 0px;
-}
 .p-1 {
 	padding: 0.25rem;
+}
+.p-0 {
+	padding: 0px;
 }
 .px-4 {
 	padding-left: 1rem;
@@ -1630,6 +1647,12 @@ select {
 .pt-8 {
 	padding-top: 2rem;
 }
+.pr-6 {
+	padding-right: 1.5rem;
+}
+.pl-6 {
+	padding-left: 1.5rem;
+}
 .text-left {
 	text-align: left;
 }
@@ -1700,6 +1723,9 @@ select {
 .tracking-wider {
 	letter-spacing: 0.05em;
 }
+.tracking-wide {
+	letter-spacing: 0.025em;
+}
 .text-gray-500 {
 	--tw-text-opacity: 1;
 	color: rgba(107, 114, 128, var(--tw-text-opacity));
@@ -1767,6 +1793,10 @@ select {
 .text-yellow-amstrad {
 	--tw-text-opacity: 1;
 	color: rgba(252, 245, 82, var(--tw-text-opacity));
+}
+.text-blue-amstrad {
+	--tw-text-opacity: 1;
+	color: rgba(8, 18, 138, var(--tw-text-opacity));
 }
 .underline {
 	text-decoration: underline;
@@ -2158,6 +2188,10 @@ html {
 
 	.sm\:items-start {
 		align-items: flex-start;
+	}
+
+	.sm\:items-end {
+		align-items: flex-end;
 	}
 
 	.sm\:items-center {
