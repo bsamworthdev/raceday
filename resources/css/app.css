@@ -1,0 +1,14 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+html {
+    @apply text-yellow-amstrad;
+}
+
+@font-face {
+    font-family: 'Amstrad CPC464';
+    src: url('/fonts/Amstrad-CPC464.woff2') format('woff2'), url('/fonts/Amstrad-CPC464.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
